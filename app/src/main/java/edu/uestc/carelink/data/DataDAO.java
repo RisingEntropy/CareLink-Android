@@ -10,15 +10,22 @@ import java.util.List;
 @Dao
 public interface DataDAO {
     @Query("SELECT * FROM data_record")
-    List<DatabaseEntity> getAll();
+    List<DatabaseEntity>getAll();
 
     @Query("SELECT * FROM data_record WHERE date IN (:queryDates)")
-    List<DatabaseEntity> loadAllByDates(String[] queryDates);
+    List<DatabaseEntity> queryAllByDates(String[] queryDates);
+    @Query("SELECT * FROM data_record WHERE date IS :date")
+    DatabaseEntity queryByDate(String date);
+
+    @Query("SELECT date FROM data_record")
+    List<String> queryAllEntityNames();
 
     @Delete
     void delete(DatabaseEntity entity);
 
     @Insert
     void insertAll(DatabaseEntity... entities);
+
+
 
 }
