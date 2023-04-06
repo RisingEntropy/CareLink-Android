@@ -30,7 +30,7 @@ public class SensorDataManager {
         return SensorDataManager.instance;
     }
 
-    public List<String> getRecordEntities(){
+    public List<String> getRecordEntityNames(){
         return this.dao.queryAllEntityNames();
     }
 
@@ -38,7 +38,7 @@ public class SensorDataManager {
         return SensorData.loadFromJson(this.dao.queryByDate(date).jsonText);
     }
 
-    public List<SensorData> querySensorDataList(String ... dates){
+    public List<SensorData> querySensorData(String ... dates){
         List<SensorData> list = new ArrayList<>();
         for(String date:dates){
             list.add(SensorData.loadFromJson(this.dao.queryByDate(date).jsonText));

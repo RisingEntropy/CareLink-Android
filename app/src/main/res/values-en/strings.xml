@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">CareLink</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="label_sensor_data_analysis">Sensor data analysis</string>
     <string name="label_sensor_data_analysis_temperature">Temperature:</string>
     <string name="label_sensor_data_analysis_heart_rate">Heart rate:</string>
@@ -8,6 +7,6 @@
     <string name="label_blood_oxygen">Blood Oxygen</string>
     <string name="label_heart_rate">Heart Rate</string>
     <string name="label_temperature">Temperature</string>
-    <string name="example_text">This is an exapmle text.To be, or not to be: that is the question:Whether tis nobler in the mind to suffer.The slings and arrows of outrageous fortune.Or to take arms against a sea of troubles.And by opposing end them. To die: to sleep;.No more; and by a sleep to say we end</string>
+    <string name="example_text">This is an example text. To be, or not to be: that is the question:Whether tis nobler in the mind to suffer.The slings and arrows of outrageous fortune.Or to take arms against a sea of troubles.And by opposing end them. To die: to sleep;.No more; and by a sleep to say we end</string>
 
 </resources>

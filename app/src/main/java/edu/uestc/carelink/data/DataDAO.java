@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Upsert;
 
 import java.util.List;
 
@@ -25,6 +26,10 @@ public interface DataDAO {
 
     @Insert
     void insertAll(DatabaseEntity... entities);
+
+    @Upsert
+    void upsertAll(DatabaseEntity ...entities);
+
 
 
 

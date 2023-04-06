@@ -13,17 +13,19 @@ public class SensorData implements Serializable {
     private List<Float> heart_rate;
     private List<Float> blood_oxygen;
     private List<Float> temperature;
+    private List<Integer> timestamp;// when was the data recorded
 
-    public SensorData(List<Float> heart_rate, List<Float> blood_oxygen, List<Float> temperature){
+    public SensorData(List<Float> heart_rate, List<Float> blood_oxygen, List<Float> temperature, List<Integer> timestamp){
         this.heart_rate = heart_rate;
         this.blood_oxygen = blood_oxygen;
         this.temperature = temperature;
+        this.timestamp = timestamp;
     }
     public SensorData(){
         this.heart_rate = new ArrayList<>();
         this.blood_oxygen = new ArrayList<>();
         this.temperature = new ArrayList<>();
-
+        this.timestamp = new ArrayList<>();
     }
 
     public static SensorData loadFromJson(String json){
@@ -62,6 +64,15 @@ public class SensorData implements Serializable {
         if(obj == null)return false;
         SensorData data2 = (SensorData) obj;
         return temperature.equals(data2.temperature)&&heart_rate.equals(data2.heart_rate)&&blood_oxygen.equals(data2.blood_oxygen);
+    }
+
+
+    public List<Integer> getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(List<Integer> timestamp) {
+        this.timestamp = timestamp;
     }
     @Override
     public String toString(){
