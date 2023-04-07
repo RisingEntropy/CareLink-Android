@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.animation.AnimationUtils;
 
 import edu.uestc.carelink.R;
+import edu.uestc.carelink.ui.loadinganimation.indicators.BallTrianglePathIndicator;
 
 
 public class AVLoadingIndicatorView extends View {

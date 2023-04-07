@@ -33,8 +33,6 @@ dependencies {
     def gson_version = "2.10.1"
     def fragment_version = "1.5.6"
 
-    // Java language implementation
-    //beautiful loading animation
 
     implementation "androidx.fragment:fragment:$fragment_version"
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -23,12 +24,15 @@ import java.util.concurrent.Executors;
 import edu.uestc.carelink.R;
 import edu.uestc.carelink.data.SensorData;
 import edu.uestc.carelink.data.SensorDataManager;
+import edu.uestc.carelink.ui.loadinganimation.AVLoadingIndicatorView;
 
 public class ChartsActivity extends AppCompatActivity {
     private ExecutorService dbExecutor;
     private BarChart temperatureChart;
     private BarChart heartRateChart;
     private BarChart bloodOxygenChart;
+
+    private AVLoadingIndicatorView loadingView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,11 @@ public class ChartsActivity extends AppCompatActivity {
         this.temperatureChart = findViewById(R.id.temperature_chart);
         this.heartRateChart = findViewById(R.id.heart_rate_chart);
         this.bloodOxygenChart = findViewById(R.id.blood_oxygen_chart);
+        this.loadingView = findViewById(R.id.loadingView);
+//        this.loadingView.
+        this.loadingView.bringToFront();
+        this.loadingView.show();
+
         setupChartStyle(this.temperatureChart);
         setupChartStyle(this.heartRateChart);
         setupChartStyle(this.bloodOxygenChart);
@@ -55,7 +64,6 @@ public class ChartsActivity extends AppCompatActivity {
         xAxis.setLabelCount(24);
         xAxis.setValueFormatter(formatter);
 
-
     }
     private void queryChartData(String date){
         this.dbExecutor.submit(new Runnable() {
@@ -73,10 +81,12 @@ public class ChartsActivity extends AppCompatActivity {
         uiThead.post(new Runnable() {
             //TODO Analyze data and generate comment, maybe chatGPT is ok to USE.
             private void processComment(){
-
+//                ChartsActivity.this.loadingView.smoothToHide();
+//                ChartsActivity.this.loadingView.setVisibility(View.INVISIBLE);
             }
             @Override
             public void run() {
+
                 ArrayList<BarEntry> blood_oxygen = new ArrayList<>();
                 ArrayList<BarEntry> heart_rate = new ArrayList<>();
                 ArrayList<BarEntry> temperature=  new ArrayList<>();
@@ -104,6 +114,7 @@ public class ChartsActivity extends AppCompatActivity {
                 ChartsActivity.this.bloodOxygenChart.invalidate();
                 ChartsActivity.this.heartRateChart.invalidate();
                 ChartsActivity.this.temperatureChart.invalidate();
+                processComment();
             }
         });
     }

@@ -1,4 +1,4 @@
-package edu.uestc.carelink.ui.loadinganimation;
+package edu.uestc.carelink.ui.loadinganimation.indicators;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -7,6 +7,8 @@ import android.view.animation.LinearInterpolator;
 import android.animation.ValueAnimator;
 
 import java.util.ArrayList;
+
+import edu.uestc.carelink.ui.loadinganimation.Indicator;
 
 /**
  * Created by Jack on 2015/10/19.
