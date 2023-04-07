@@ -61,7 +61,7 @@ public class ChartsActivity extends AppCompatActivity {
         XAxis xAxis = chart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         chart.setMaxVisibleValueCount(60);
-        xAxis.setGranularity(1);// label every 2 hours
+        xAxis.setGranularity(2);// label every 2 hours
         xAxis.setLabelCount(24);
         xAxis.setValueFormatter(formatter);
 

@@ -9,6 +9,9 @@
     <string name="label_temperature">温度</string>
     <string name="label_loading">加载中</string>
     <string name="error_bluetooth_not_supported">错误，设备不支持蓝牙</string>
+    <string name="click_to_connect">点击以连接</string>
+    <string name="refresh">刷新</string>
+    <string name="no_bluetooth_permission">没有蓝牙权限，请手动在设置中开启权限</string>
     <string name="error_user_cancel_bluetooth">错误，CareLink app需要蓝牙与设备进行连接</string>
     <string name="error_bluetooth_start_fail">错误，蓝牙无法启动</string>
     <string name="example_text">这是一段示例文字。逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。</string>

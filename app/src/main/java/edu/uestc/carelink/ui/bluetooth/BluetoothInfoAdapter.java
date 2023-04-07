@@ -1,26 +1,26 @@
 package edu.uestc.carelink.ui.bluetooth;
 
-import android.Manifest;
-import android.bluetooth.BluetoothDevice;
-import android.content.pm.PackageManager;
+import android.bluetooth.BluetoothAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 import edu.uestc.carelink.R;
 
-public class BluetoothAdapter extends RecyclerView.Adapter<BluetoothAdapter.ViewHolder> {
+public class BluetoothInfoAdapter extends RecyclerView.Adapter<BluetoothInfoAdapter.ViewHolder> {
     private final List<BluetoothChannelInfo> devices;
 
-    public BluetoothAdapter(List<BluetoothChannelInfo> devices) {this.devices = devices;}
+    public BluetoothInfoAdapter(List<BluetoothChannelInfo> devices) {this.devices = devices;}
+    public BluetoothInfoAdapter(){
+        this.devices = new ArrayList<>();
+    }
 
     @NonNull
     @Override
@@ -33,6 +33,17 @@ public class BluetoothAdapter extends RecyclerView.Adapter<BluetoothAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.address.setText(devices.get(position).address);
         holder.name.setText(devices.get(position).name);
+    }
+
+    public void addInfo(BluetoothChannelInfo channelInfo){
+        this.devices.add(channelInfo);
+        notifyItemChanged(this.devices.size()-1);
+    }
+    public void clearAllInfo(){
+        for(int i = 0;i<this.devices.size();i++)
+            notifyItemChanged(0);
+        this.devices.clear();
+
     }
 
     @Override

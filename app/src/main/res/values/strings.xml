@@ -9,6 +9,9 @@
     <string name="label_heart_rate">Heart Rate</string>
     <string name="label_temperature">Temperature</string>
     <string name="label_loading">Loading</string>
+    <string name="refresh">refresh</string>
+    <string name="no_bluetooth_permission">No bluetooth permission, please permit manually in Settings</string>
+    <string name="click_to_connect">Click to connect</string>
     <string name="error_user_cancel_bluetooth">Error, CareLink app requires bluetooth to connect the embedding device</string>
     <string name="error_bluetooth_not_supported">Error, bluetooth not supported</string>
     <string name="error_bluetooth_start_fail">Error, the bluetooth cannot be started</string>
