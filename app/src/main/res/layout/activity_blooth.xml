@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BluetoothActivity">
+    tools:context=".ui.bluetooth.BluetoothActivity">
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bluetooth_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="0dp"

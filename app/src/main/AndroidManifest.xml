@@ -23,7 +23,7 @@
         android:theme="@style/Theme.CareLink"
         tools:targetApi="31">
         <activity
-            android:name=".ui.BluetoothActivity"
+            android:name=".ui.bluetooth.BluetoothActivity"
             android:exported="true" >
 
         </activity>

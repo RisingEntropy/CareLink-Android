@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -79,10 +80,11 @@ public class ChartsActivity extends AppCompatActivity {
     private void updateUI(SensorData dataToShow, String date){
         Handler uiThead = new Handler(Looper.getMainLooper());
         uiThead.post(new Runnable() {
-            //TODO Analyze data and generate comment, maybe chatGPT is ok to USE.
+            //TODO Analyze data and generate comment, maybe chatGPT is ok to use.
             private void processComment(){
-//                ChartsActivity.this.loadingView.smoothToHide();
-//                ChartsActivity.this.loadingView.setVisibility(View.INVISIBLE);
+                ((TextView)(ChartsActivity.this.findViewById(R.id.chart_analysis_title))).setText(R.string.label_sensor_data_analysis);
+                ChartsActivity.this.loadingView.smoothToHide();
+                ChartsActivity.this.loadingView.setVisibility(View.INVISIBLE);
             }
             @Override
             public void run() {

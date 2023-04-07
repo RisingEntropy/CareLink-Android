@@ -7,6 +7,7 @@
     <string name="label_blood_oxygen">血氧</string>
     <string name="label_heart_rate">心率</string>
     <string name="label_temperature">温度</string>
+    <string name="label_loading">加载中</string>
     <string name="error_bluetooth_not_supported">错误，设备不支持蓝牙</string>
     <string name="error_user_cancel_bluetooth">错误，CareLink app需要蓝牙与设备进行连接</string>
     <string name="error_bluetooth_start_fail">错误，蓝牙无法启动</string>

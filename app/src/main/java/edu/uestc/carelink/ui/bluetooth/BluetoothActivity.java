@@ -1,10 +1,11 @@
-package edu.uestc.carelink.ui;
+package edu.uestc.carelink.ui.bluetooth;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
@@ -14,12 +15,14 @@ import android.widget.Toast;
 import edu.uestc.carelink.R;
 
 public class BluetoothActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
     private BluetoothAdapter bluetoothAdapter;
     private boolean bluetoothSupport = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blooth);
+        this.recyclerView = findViewById(R.id.bluetooth_recyclerview);
         this.bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if(this.bluetoothAdapter == null){
             this.bluetoothSupport = false;
@@ -43,6 +46,7 @@ public class BluetoothActivity extends AppCompatActivity {
                     }
                     if(result.getResultCode()==RESULT_OK){
                         BluetoothActivity.this.bluetoothSupport = true;
+                        //TODO debug code
                         Toast.makeText(BluetoothActivity.this, "OKOKOK", Toast.LENGTH_SHORT).show();
                         return;
                     }

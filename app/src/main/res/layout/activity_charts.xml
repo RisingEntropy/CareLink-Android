@@ -21,6 +21,8 @@
         android:layout_height="359dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="36dp"
+        android:background="#ffffff"
+        app:indicatorColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:indicatorName="BallTrianglePathIndicator"
@@ -58,13 +60,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/chart_analysis_title"
         android:layout_width="146dp"
         android:layout_height="28dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/label_sensor_data_analysis"
+        android:text="@string/label_loading"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/temperature_chart" />
