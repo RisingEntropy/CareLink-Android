@@ -8,6 +8,8 @@
     <string name="label_heart_rate">Heart Rate</string>
     <string name="label_temperature">Temperature</string>
     <string name="label_loading">Loading</string>
+    <string name="anonymous">anonymous</string>
+    <string name="loading">loading...</string>
     <string name="click_to_connect">Click to connect</string>
     <string name="refresh">refresh</string>
     <string name="no_bluetooth_permission">No bluetooth permission, please permit manually in Settings</string>
@@ -15,5 +17,10 @@
     <string name="error_bluetooth_not_supported">Error, bluetooth not supported</string>
     <string name="error_bluetooth_start_fail">Error, the bluetooth cannot be started</string>
     <string name="example_text">This is an example text. To be, or not to be: that is the question:Whether tis nobler in the mind to suffer.The slings and arrows of outrageous fortune.Or to take arms against a sea of troubles.And by opposing end them. To die: to sleep;.No more; and by a sleep to say we end</string>
-
+    <string name="state">State:</string>
+    <string name="NA">N/A</string>
+    <string name="synchronizing">Synchronizing...</string>
+    <string name="data_synchronized">Synchronized!</string>
+    <string name="not_connected">Not connected</string>
+    <string name="reconnect">Reconnect</string>
 </resources>

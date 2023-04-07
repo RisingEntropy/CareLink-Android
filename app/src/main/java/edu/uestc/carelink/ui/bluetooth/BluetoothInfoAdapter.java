@@ -37,14 +37,13 @@ public class BluetoothInfoAdapter extends RecyclerView.Adapter<BluetoothInfoAdap
 
     public void addInfo(BluetoothChannelInfo channelInfo){
         this.devices.add(channelInfo);
-        notifyItemChanged(this.devices.size()-1);
+        notifyItemInserted(this.devices.size()-1);
     }
     public void clearAllInfo(){
-        for(int i = 0;i<this.devices.size();i++)
-            notifyItemChanged(0);
         this.devices.clear();
-
+        notifyDataSetChanged();
     }
+
 
     @Override
     public int getItemCount() {

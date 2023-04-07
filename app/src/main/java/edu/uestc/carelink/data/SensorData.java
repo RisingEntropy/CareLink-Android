@@ -10,6 +10,7 @@ import java.util.List;
 
 public class SensorData implements Serializable {
     private static Gson gson;
+    private String date;
     private List<Float> heart_rate;
     private List<Float> blood_oxygen;
     private List<Float> temperature;
@@ -91,6 +92,14 @@ public class SensorData implements Serializable {
             buffer.append(val).append(",");
         }
         return buffer.toString();
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
 
