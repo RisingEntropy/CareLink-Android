@@ -16,14 +16,14 @@
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <edu.uestc.carelink.ui.loadinganimation.AVLoadingIndicatorView
-        android:id="@+id/imageView"
+        android:id="@+id/loadingView"
         android:layout_width="388dp"
         android:layout_height="359dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
+        app:indicatorName="BallTrianglePathIndicator"
          />
 
     <com.github.mikephil.charting.charts.BarChart
