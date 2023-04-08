@@ -15,6 +15,7 @@ public class SensorData implements Serializable {
     private List<Float> blood_oxygen;
     private List<Float> temperature;
     private List<Integer> timestamp;// when was the data recorded
+    private transient boolean newData = false;
 
     public SensorData(List<Float> heart_rate, List<Float> blood_oxygen, List<Float> temperature, List<Integer> timestamp){
         this.heart_rate = heart_rate;
@@ -100,6 +101,14 @@ public class SensorData implements Serializable {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public boolean isNewData() {
+        return newData;
+    }
+
+    public void setNewData(boolean newData) {
+        this.newData = newData;
     }
 }
 

@@ -23,4 +23,5 @@
     <string name="data_synchronized">同步完成</string>
     <string name="not_connected">连接失败</string>
     <string name="reconnect">重新连接</string>
+    <string name="click_to_view">点击查看</string>
 </resources>

@@ -50,7 +50,9 @@ public class ChartsActivity extends AppCompatActivity {
         setupChartStyle(this.heartRateChart);
         setupChartStyle(this.bloodOxygenChart);
         this.dbExecutor = Executors.newSingleThreadExecutor();
-        queryChartData("20230406");
+        String date = getIntent().getStringExtra("date");
+        setTitle(date);
+        queryChartData(date);
 
     }
     private void setupChartStyle(BarChart chart){
