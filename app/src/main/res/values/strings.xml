@@ -15,10 +15,11 @@
     <string name="no_bluetooth_permission">No bluetooth permission, please permit manually in Settings</string>
     <string name="click_to_connect">Click to connect</string>
     <string name="click_to_view">Click to view</string>
+    <string name="measure">Measure</string>
     <string name="error_user_cancel_bluetooth">Error, CareLink app requires bluetooth to connect the embedding device</string>
     <string name="error_bluetooth_not_supported">Error, bluetooth not supported</string>
     <string name="error_bluetooth_start_fail">Error, the bluetooth cannot be started</string>
-    <string name="example_text">This is an exapmle text.To be, or not to be: that is the question:Whether tis nobler in the mind to suffer.The slings and arrows of outrageous fortune.Or to take arms against a sea of troubles.And by opposing end them. To die: to sleep;.No more; and by a sleep to say we end</string>
+    <string name="example_text">Everything is in normal range</string>
     <string name="state">State:</string>
     <string name="NA">N/A</string>
     <string name="synchronizing">Synchronizing...</string>

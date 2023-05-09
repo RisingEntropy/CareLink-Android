@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 List<Integer> time = new ArrayList<>();
                 Random random = new Random();
                 for(int i = 1;i<40;i++){
-                    a1.add(random.nextFloat());
-                    a2.add(random.nextFloat());
-                    a3.add(random.nextFloat());
+                    a1.add((float)(random.nextInt(10)+70));
+                    a2.add(random.nextFloat()+32);
+                    a3.add(random.nextFloat()*0.1f+99.f);
                     time.add(i);
                 }
-                data.setDate("20220409");
+                data.setDate("20230504");
                 data.setHeart_rate(a1);
                 data.setTemperature(a2);
                 data.setBlood_oxygen(a3);
